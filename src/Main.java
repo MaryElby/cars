@@ -1,18 +1,35 @@
 import java.sql.Array;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args){
 
         Car myCar = new Car("Black",18);
+        Car myOtherCar = new Car("Red",4);
         myCar.printDetails();
 
-        int myArray[] = new int[4] ;
+        int[] myArray = new int[4] ;
+        Car[] myCarArray = new Car[2];
+        Dice myDice = new Dice();
+        myCarArray[0] = myCar;
+        myCarArray[1] = myOtherCar;
 
+        System.out.println(Arrays.toString(myArray));
+        System.out.println(Arrays.asList(myCarArray));
+        System.out.println(myCarArray[0].getColour());
+
+        //got this out of the help text for asList
+        List<String> stooges = Arrays.asList("Larry", "Moe", "Curly");
+        System.out.println(Arrays.asList(stooges));
+        //this just rounds the float to an int, it doesn't fail
+        myArray[0] = (17 /4);
 
         System.out.println(Arrays.toString(myArray));
 
+        int diceValue = myDice.throwDice(myDice);
+        System.out.println("You rolled a " + diceValue);
 
     }
 
