@@ -12,7 +12,7 @@ public class Dice {
 
     public int throwDice(Dice thisdice){
         int Dicevalue = ((int) (Math.random() * 6));
-        System.out.println(Dicevalue);
+        //System.out.println(Dicevalue);
         return Dicevalue;
     }
 }

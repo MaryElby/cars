@@ -30,7 +30,18 @@ public class Main {
 
         int diceValue = myDice.throwDice(myDice);
         System.out.println("You rolled a " + diceValue);
-
+        System.out.println("Let's play Yahtzee!");
+        for (int i=1;i < 6;i++){
+            diceValue = myDice.throwDice(myDice);
+            System.out.println("You rolled a " + diceValue);
+        }
+        System.out.println("My turn");
+        int j =1;
+        while (j<6){
+            diceValue = myDice.throwDice(myDice);
+            System.out.println("I rolled a " + diceValue);
+            j++;
+        }
     }
 
 }
