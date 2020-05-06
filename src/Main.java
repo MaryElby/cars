@@ -13,6 +13,7 @@ public class Main {
         int[] myArray = new int[4] ;
         Car[] myCarArray = new Car[2];
         Dice myDice = new Dice();
+        LoadedDice myLoadedDice = new LoadedDice();
         myCarArray[0] = myCar;
         myCarArray[1] = myOtherCar;
 
@@ -38,7 +39,7 @@ public class Main {
         System.out.println("My turn");
         int j =1;
         while (j<6){
-            diceValue = myDice.throwDice(myDice);
+            diceValue = myLoadedDice.throwDice(myLoadedDice);
             System.out.println("I rolled a " + diceValue);
             j++;
         }

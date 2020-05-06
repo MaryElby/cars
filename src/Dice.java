@@ -12,6 +12,11 @@ public class Dice {
 
     public int throwDice(Dice thisdice){
         int Dicevalue = ((int) (Math.random() * 6));
+        //Get rid of zero - a dice doesn't have a zero
+        if (Dicevalue ==0)
+        {
+            Dicevalue=1;
+        }
         //System.out.println(Dicevalue);
         return Dicevalue;
     }
